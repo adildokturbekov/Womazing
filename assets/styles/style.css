@@ -1,0 +1,45 @@
+body * {
+    font-family: var(--font-family);
+}
+.container {
+    max-width: 1130px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.flex {
+    display: flex;
+}
+/* HEADER */
+.header__container {
+    padding: 54px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.header__logo {
+    align-items: center;
+    column-gap: 11px;
+}
+.header__title_logo {
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--dark-text-color);
+}
+.header__menu {
+    align-items: center;
+    column-gap: 45px;
+}
+.header__contact {
+    align-items: center;
+    gap: 9px;
+
+}
+.header__shop_info {
+   gap: 67px;
+}
+.header__phone {
+    align-items: center;
+    column-gap: 9px;
+}
+/* HEADER */
