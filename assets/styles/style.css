@@ -1,13 +1,22 @@
 body * {
     font-family: var(--font-family);
 }
+
 .container {
     max-width: 1130px;
     margin: 0 auto;
-    padding: 0 20px;
+    
 }
 .flex {
     display: flex;
+}
+.bc__section_hero_r {
+    position: absolute;
+    right: 0;
+    width: 653px;
+    height: 845px;
+    z-index: -1;
+    background: #f1eadc;
 }
 /* HEADER */
 .header__container {
@@ -15,7 +24,7 @@ body * {
     display: flex;
     justify-content: space-between;
 }
-.header__logo {
+.header__logo > a {
     align-items: center;
     column-gap: 11px;
 }
@@ -30,16 +39,190 @@ body * {
     align-items: center;
     column-gap: 45px;
 }
+.header__list {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: var(--dark-text-color);
+    position: relative;
+    padding-bottom: 4px;
+    transition: 0.3s;
+}
+.header__list::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--dark-text-color);
+
+}
+.header__list:hover {
+    opacity: 1;
+    color: var(--dark-text-color);
+}
+.header__list:hover::after {
+    width: 100%;
+}
+.header__list.weight:hover {
+    color: var(--cta);
+    opacity: 1;
+}
+.weight {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: var(--cta);
+    
+}
+.weight::after {
+    content: "";
+    background-color: var(--cta);
+    color: var(--cta);
+
+}
+
 .header__contact {
     align-items: center;
     gap: 9px;
 
 }
+
 .header__shop_info {
    gap: 67px;
 }
 .header__phone {
     align-items: center;
     column-gap: 9px;
+    
+}
+.header__phone > svg {
+    fill: #6E9C9F ;
+}
+.header__phone:hover > svg {
+    fill: #fff;
+    background-color: #6E9C9F;
 }
 /* HEADER */
+/* HERO */
+.hero {
+    padding-bottom: 120px;
+}
+.hero__container {
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.hero__title {
+    font-weight: 500;
+    font-size: 55px;
+    line-height: 110%;
+    letter-spacing: 0.02em;
+    color: var(--dark-text-color);
+}
+.hero__content {
+    padding-top: 186px;
+    max-width: 585px;
+}
+.hero__box   {
+    max-width: 385px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    row-gap: 52px;
+    padding-bottom: 126px;
+}
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateX(-20px); /* Небольшое смещение слева для динамики */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.hero__slide {
+    display: none;
+    
+}
+#s1:checked ~ .hero__container .hero__slide.text-1,
+#s2:checked ~ .hero__container .hero__slide.text-2,
+#s3:checked ~ .hero__container .hero__slide.text-3 {
+    display: block;
+    animation: fadeInText 0.8s ease-out forwards;
+}
+.slider__bullets {
+    display: flex;
+    gap: 12px;
+    margin-top: 50px;
+}
+.slider__bullets label {
+    width: 30px;
+    height: 4px;
+    background: #E1E1E1;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#s1:checked ~ .hero__container .hero__content .slider__bullets label[for="s1"],
+#s2:checked ~ .hero__container .hero__content .slider__bullets label[for="s2"],
+#s3:checked ~ .hero__container .hero__content .slider__bullets label[for="s3"] {
+    background: #000;
+}
+.hero__desc {
+    padding-top: 45px;
+    text-align: right;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: var(--dark-text-color);
+}
+.hero__btn__shop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+   
+}
+.hero__btn__shop_ikon {
+    display: flex;
+    align-items: center;
+}
+.hero__button {
+    padding: 22px 50px;
+    width: 243px;
+    height: 68px;
+    background: var(--cta);
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 139%;
+    letter-spacing: 0.02em;
+    color: var(--light-text-color);
+    }
+    .hero__images {
+        display: flex;
+    }
+    .hero__img-1 {
+        position: relative;
+        object-fit: cover;
+    }
+     .hero__img-2 {
+        position: absolute;
+        object-fit: cover;
+        z-index: 999;
+        top: 300px;
+        right: 90px;
+     }
+      .hero__img-3 {
+        position: absolute;
+        right: 547px;
+        bottom: -150px;
+        object-fit: cover;
+        z-index: 999;
+      }
+/* HERO */
