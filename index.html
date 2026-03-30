@@ -82,7 +82,7 @@
                     <rect width="67" height="67" fill="#6E9C9F" fill-opacity="0.1"/>
                     <path d="M33 19.5V47.5M33 47.5L26 40.3108M33 47.5L40 40.3108" stroke="#6E9C9F"/>
                     </svg>
-                    <button form="hero__btn" class="hero__button">Открыть магазин</button>
+                    <button class="hero__button">Открыть магазин</button>
                 </div>
             </div>
             </div>
@@ -219,13 +219,39 @@
    </section>
    <section class="team" id="team">
     <div class="container">
-        <h2 class="title"></h2>
-        <div class="team__content">
-            <div class="team__img">
-                <img src="" alt="">
+        <input type="radio" id="img1" name="team__slider" checked hidden>
+        <input type="radio" id="img2" name="team__slider" hidden>
+        <input type="radio" id="img3" name="team__slider" hidden>
+        <h2 class="title">Команда мечты Womazing</h2>
+
+        <div class="team__container flex ">
+            <div class="team__content">
+                <div class="team__slide img__slide-1">
+                    <img src="./assets/images/team-img-slide-1.webp" alt="image">
+                </div>
+                <div class="team__slide img__slide-2">
+                    <img src="./assets/images/team-img-slide-2.webp" alt="image">
+                </div>
+                <div class="team__slide img__slide-3">
+                    <img src="./assets/images/team-img-slide-3.webp" alt="image">
+                </div>
+                <div class="team__btn">
+            <div class="team__bullets">
+                <label for="img1"></label>
+                <label for="img2"></label>
+                <label for="img3"></label>
             </div>
         </div>
-    </div>
+            </div>
+            <div class="team__content_text">
+                <h3 class="features__title team__title">Для каждой</h3>
+                <p class="features__desc team__desc">Каждая девушка уникальна. Однако, мы схожи в миллионе мелочей.</p>
+                <p class="features__desc ">Womazing ищет эти мелочи и создает прекрасные вещи, которые выгодно подчеркивают достоинства каждой девушки</p>
+                <a class="team__info" href="#">Подробнее о бренде</a>
+            </div>
+        </div>
+        
+    
    </section>
 </body>
 </html>
