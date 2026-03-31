@@ -407,6 +407,41 @@ body * {
     display: block;
     animation: 0.8s;
 }
+.team__arrows {
+    position: absolute;
+    top: 50%;
+    left: -60px;
+    right: -60px;
+    transform: translateY(-50%);    
+    z-index: 9999999;
+    pointer-events: none;
+}
+.team__arroew_group {
+    display: none; 
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+#img1:checked ~ .team__container .group-1,
+#img2:checked ~ .team__container .group-2,
+#img3:checked ~ .team__container .group-3 {
+    display: flex;
+}
+.team__arrows label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    pointer-events: auto;
+    transition: 0.3s;
+
+}
+.team__arrows label svg {
+    stroke:#858585 ;
+}
+.team__arrows label:hover svg {
+    stroke: var(--dark-text-color);
+}
 .team__btn {
     position: absolute;
     bottom: 61px;
@@ -495,6 +530,22 @@ body * {
     line-height: 140%;
     letter-spacing: 0.02em;
     color: var(--dark-text-color);
+    padding-bottom: 5px;
+    position: relative;
+}
+.footer__list::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    z-index: 999;
+    transition: 0.3s;
+    background-color: var(--dark-text-color);
+}
+.footer__list:hover::after {
+    width: 100%;
 }
 .zg {
     font-weight: 700;
@@ -504,7 +555,7 @@ body * {
     color: var(--cta);
 }
 .list {
-    padding-bottom: 38px;
+    padding-top: 38px;
 }
 
 .footer__box {
@@ -512,6 +563,7 @@ body * {
     flex-direction: column;
     row-gap: 10px;
 }
+
 .footer__contact {
     flex-direction: column;
     align-items: flex-end;
