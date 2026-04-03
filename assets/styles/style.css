@@ -881,3 +881,32 @@ hr {
 
 /* order__processing */
 /* CHECKOUT */
+/* SYCCESE */
+.hero__finish {
+    padding: 190px 0 130px;
+}
+.status__panel {
+    padding-bottom: 140px;
+}
+.status__panel_container {
+    justify-content: space-between;
+    align-items: center;    
+}
+.status__panel-content {
+    align-items: center;
+    column-gap: 32px;
+}
+.status__panel-text {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: var(--dark-text-color);
+}
+.panel_desc {
+    font-size: 17px;
+}
+.status__panel-btn {
+    font-size: 14px;
+}
+/* SYCCESE */
