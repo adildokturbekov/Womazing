@@ -1,0 +1,424 @@
+/* CONTACT - hero_contacts */
+
+/* Заголовок контактов */
+.hero_contacts_container {
+  max-width: 1130px;
+  margin: 0 auto;
+  padding: 110px 0 26px 0;
+}
+
+.hero_title {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 110%;
+  letter-spacing: 0.02em;
+  color: #000;
+  margin-bottom: 26px;
+}
+
+.hero_breadcrumb {
+  display: flex;
+  gap: 42px;
+}
+
+.shot_text {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #000;
+}
+
+.text_3 {
+  color: #909090;
+}
+
+/* Основная секция контактов */
+.hero_body_contacts {
+  padding: 100px 0;
+}
+
+/* 1. Один контейнер — одна ширина */
+.contacts__container {
+  max-width: 1130px;
+  margin: 0 auto;
+}
+
+/* 2. Карта — высота явная, ширина 100% */
+.contacts__map {
+  margin-bottom: 60px;
+  padding: 0 0;
+}
+
+.contacts__map-frame {
+  width: 100%;
+  height: 600px;
+  display: block;
+  border: none;
+  border-radius: 8px;
+}
+
+/* 3. Контакты в ряд через flex */
+.contacts__info {
+  display: flex;
+  gap: 150px;
+  padding: 60px 0;
+  justify-content: flex-start;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 80px;
+}
+
+.contacts__info-item {
+  flex: 0 0 auto;
+}
+
+.contacts__label {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #909090;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.contacts__value {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #000;
+  transition: 0.3s;
+  display: block;
+}
+
+.contacts__value:hover {
+  color: var(--cta);
+}
+
+/* Форма контактов */
+.contacts__form-wrap {
+  max-width: 400px;
+}
+
+.contacts__title {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #000;
+  margin-bottom: 40px;
+}
+
+.contacts__form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 4. Инпуты одинаковые через общий класс */
+.contacts__input,
+.contacts__textarea {
+  width: 100%;
+  display: block;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 15px 0;
+  margin-bottom: 20px;
+  outline: none;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #000;
+  background: transparent;
+}
+
+.contacts__input::placeholder,
+.contacts__textarea::placeholder {
+  color: #999;
+}
+
+.contacts__textarea {
+  resize: none;
+  height: 80px;
+  margin-bottom: 30px;
+}
+
+.contacts__btn {
+  border: none;
+  padding: 22px 50px;
+  width: 189px;
+  height: 68px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 139%;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: var(--light-text-color);
+  background: var(--cta);
+  transition: 0.3s;
+  cursor: pointer;
+  align-self: flex-start;
+  margin-top: 35px;
+  
+}
+
+.contacts__btn:hover {
+  background-color: #509498;
+}
+
+.contacts__success {
+  background: #f5ece0;
+  padding: 22px 30px;
+  border-radius: 4px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #000;
+  margin-top: 60px;
+}
+
+.hero_contacts {
+  margin-bottom: 130px;
+}
+
+/* АДАПТАЦИЯ ДЛЯ ПЛАНШЕТОВ И МОБИЛЬНЫХ */
+@media (max-width: 1024px) {
+  .hero_contacts_container {
+    padding: 80px 40px 20px 40px;
+  }
+
+  .hero_title {
+    font-size: 45px;
+    margin-bottom: 20px;
+  }
+
+  .contacts__info {
+    gap: 80px;
+    padding: 50px 40px;
+  }
+
+  .contacts__container {
+    padding: 0 40px;
+  }
+
+  .contacts__form-wrap {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero_contacts_container {
+    padding: 60px 20px 15px 20px;
+  }
+
+  .hero_title {
+    font-size: 35px;
+    margin-bottom: 15px;
+  }
+
+  .hero_breadcrumb {
+    gap: 20px;
+  }
+
+  .shot_text {
+    font-size: 14px;
+  }
+
+  .hero_body_contacts {
+    padding: 60px 0;
+  }
+
+  .contacts__container {
+    padding: 0 20px;
+  }
+
+  .contacts__map-frame {
+    height: 250px;
+  }
+
+  .contacts__info {
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px 20px;
+    margin-bottom: 60px;
+  }
+
+  .contacts__form-wrap {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .contacts__title {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+  .contacts__input,
+  .contacts__textarea {
+    font-size: 16px;
+    padding: 12px 0;
+    margin-bottom: 15px;
+  }
+
+  .contacts__textarea {
+    height: 60px;
+  }
+
+  .contacts__btn {
+    width: 100%;
+    padding: 16px 40px;
+  }
+
+  .contacts__success {
+    padding: 16px 20px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero_contacts_container {
+    padding: 40px 16px 10px 16px;
+  }
+
+  .hero_title {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .shot_text {
+    font-size: 13px;
+  }
+
+  .contacts__container {
+    padding: 0 16px;
+  }
+
+  .contacts__map-frame {
+    height: 200px;
+  }
+
+  .contacts__info {
+    padding: 30px 16px;
+    margin-bottom: 40px;
+  }
+
+  .contacts__label {
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+
+  .contacts__value {
+    font-size: 15px;
+  }
+
+  .contacts__form-wrap {
+    padding: 0 16px;
+  }
+
+  .contacts__title {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .contacts__input,
+  .contacts__textarea {
+    font-size: 14px;
+    padding: 10px 0;
+    margin-bottom: 12px;
+  }
+
+  .contacts__textarea {
+    height: 50px;
+    margin-bottom: 20px;
+  }
+
+  .contacts__btn {
+    padding: 14px 30px;
+    font-size: 14px;
+  }
+}
+
+/* FOOTER */
+.footer {
+    padding: 104px 0 97px;
+    background: #f1eadc;
+}
+.footer__container {
+    justify-content: space-between;
+}
+.footer__content {
+    padding-top: 72px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: var(--dark-text-color);
+}
+.footer__nav {
+    column-gap: 45px;
+}
+.footer__list {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: var(--dark-text-color);
+    padding-bottom: 5px;
+    position: relative;
+}
+.footer__list::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    z-index: 999;
+    transition: 0.3s;
+    background-color: var(--dark-text-color);
+}
+.footer__list:hover::after {
+    width: 100%;
+}
+.zg {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: var(--cta);
+}
+.list {
+    padding-top: 38px;
+}
+
+.footer__box {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.footer__contact {
+    flex-direction: column;
+    align-items: flex-end;
+}
+.footer__contact__box {
+    flex-direction: column;
+    align-items: flex-end;
+    row-gap: 9px;
+}
+.footer__ikon {
+    column-gap: 17px;
+    padding: 31px 0;
+}
+/* FOOTER */

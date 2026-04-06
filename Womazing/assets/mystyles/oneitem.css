@@ -1,0 +1,468 @@
+/* ONE ITEM - hero*/
+.hero_title{
+    max-width: 1130px;
+    margin: 0 auto;
+    padding-top: 110px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 55px;
+    line-height: 110%;
+    letter-spacing: 0.02em;
+    color: #000;
+    }
+
+.hero_breadcrumb {
+    display: flex;
+    gap: 42px;
+    max-width: 1130px;
+    margin: 0 auto;
+    padding-top: 26px;
+}
+.shot_text {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: #000;
+}
+.text_3 {
+    color: #909090;
+}
+.about_clothes {
+    display: flex;
+    gap: 74px;
+    align-items: flex-start;
+    margin-top: 117px; 
+    margin-bottom: 117px;
+    
+}
+.sweetshotimg {
+    flex: 1;
+    max-width: 536px;
+    max-height: 729px;
+    
+  
+}
+.about_box{
+    width: 347px;
+    height: 495px;
+    flex: 1;
+    margin-top: 117px; 
+    margin-bottom: 117px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 59px;
+}
+.size_selector {
+    display: inline-flex;
+    margin-bottom: -25px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: #000;
+}
+.sweetshotimg img {
+    width: 100%; 
+    display: block; 
+    
+}
+.item_sizes label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000;
+    width: 41px;
+    height: 41px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+.item_sizes {
+  display: inline-flex;
+  gap: 14px;
+}
+.item_sizes input:checked + label {
+    background-color: #000000;
+    color: #ffffff;
+}
+.color_text {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: #000;
+    margin-bottom: -25px;
+}
+.color-chooser {
+  display: flex;
+  gap: 14px;          /* расстояние между кругами */
+  align-items: center;
+  
+}
+
+.swatch {
+  display: inline-block;
+  width:  41px;
+  height: 41px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  position: absolute;   
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+}
+.swatch.brown  { background: #927876; }
+.swatch.grey   { background: #d4d4d4; }
+.swatch.pink   { background: #fd9696; }
+.swatch.beige  { background: #fdc796; }
+
+input[type="radio"]:checked + .swatch {
+  box-shadow: 0 0 0 3px #333, 0 0 0 5px #fff;   
+  transform: scale(1.08);
+}
+.swatch:hover {
+  transform: scale(1.12);
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.15);
+}
+
+.quantity-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;         
+  margin-top: 18px;  
+  width: 100%;
+}
+
+.item_count {
+  border: 1px solid #afafaf;
+  width: 68px;
+  height: 68px;
+  background: #fff;
+  color: #000;
+  font-size: 22px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+
+.basket {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 30px;
+  height: 68px;
+  background: var(--cta);
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+/* ONE ITEM - hero*/
+
+/* ONE ITEM - product */
+
+.related_title {
+    padding-left: 180px;
+    padding-top: 13px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 110%;
+    letter-spacing: 0.02em;
+    color: #000;
+}
+
+.related_items {
+    display: flex;
+    gap: 30px;
+    padding-top: 67px;
+    padding-bottom: 94px;
+}
+
+.recommended_item {
+    text-align: center;
+}
+.recommended_name {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: #000;
+    margin-top: 24px;
+}
+.recommended__price {
+    color: #999;
+    font-size: 14px;
+}
+
+/* ONE ITEM - product */
+
+/* АДАПТАЦИЯ ДЛЯ ПЛАНШЕТОВ И МОБИЛЬНЫХ */
+@media (max-width: 1024px) {
+  .hero_title {
+    padding-top: 80px;
+    font-size: 45px;
+  }
+
+  .hero_breadcrumb {
+    padding-top: 20px;
+    gap: 20px;
+  }
+
+  .about_clothes {
+    gap: 50px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    padding: 0 40px;
+  }
+
+  .sweetshotimg {
+    max-width: 400px;
+    max-height: 500px;
+  }
+
+  .about_box {
+    width: 300px;
+    height: auto;
+  }
+
+  .related_title {
+    padding-left: 40px;
+    font-size: 35px;
+  }
+
+  .related_items {
+    padding: 50px 40px;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero_title {
+    max-width: 100%;
+    padding: 60px 20px 0 20px;
+    font-size: 35px;
+  }
+
+  .hero_breadcrumb {
+    max-width: 100%;
+    padding: 15px 20px;
+    gap: 15px;
+  }
+
+  .shot_text {
+    font-size: 14px;
+  }
+
+  .about_clothes {
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding: 0 20px;
+  }
+
+  .sweetshotimg {
+    max-width: 100%;
+    max-height: auto;
+  }
+
+  .about_box {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+  }
+
+  .related_title {
+    padding-left: 20px;
+    padding-top: 10px;
+    font-size: 28px;
+    margin-top: 40px;
+  }
+
+  .related_items {
+    flex-wrap: wrap;
+    padding: 40px 20px;
+    gap: 15px;
+    justify-content: center;
+  }
+
+  .recommended_item {
+    flex: 0 1 calc(50% - 10px);
+  }
+
+  .recommended_name {
+    font-size: 16px;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero_title {
+    padding: 40px 16px 0 16px;
+    font-size: 28px;
+  }
+
+  .hero_breadcrumb {
+    padding: 10px 16px;
+    gap: 10px;
+  }
+
+  .shot_text {
+    font-size: 13px;
+  }
+
+  .about_clothes {
+    gap: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 0 16px;
+  }
+
+  .sweetshotimg {
+    max-width: 100%;
+  }
+
+  .about_box {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .box_title {
+    font-size: 18px;
+  }
+
+  .box_price {
+    font-size: 16px;
+  }
+
+  .color_option,
+  .size_option {
+    padding: 0 10px;
+  }
+
+  .num_item,
+  .basket {
+    height: 50px;
+    font-size: 16px;
+  }
+
+  .related_title {
+    padding-left: 16px;
+    font-size: 24px;
+    margin-top: 30px;
+  }
+
+  .related_items {
+    padding: 30px 16px;
+    gap: 12px;
+  }
+
+  .recommended_item {
+    flex: 0 1 calc(50% - 6px);
+  }
+
+  .recommended_name {
+    font-size: 14px;
+    margin-top: 12px;
+  }
+}
+
+/* ONE ITEM - footer_info */
+/* FOOTER */
+.footer {
+    padding: 104px 0 97px;
+    background: #f1eadc;
+}
+.footer__container {
+    justify-content: space-between;
+}
+.footer__content {
+    padding-top: 72px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: var(--dark-text-color);
+}
+.footer__nav {
+    column-gap: 45px;
+}
+.footer__list {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: var(--dark-text-color);
+    padding-bottom: 5px;
+    position: relative;
+}
+.footer__list::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    z-index: 999;
+    transition: 0.3s;
+    background-color: var(--dark-text-color);
+}
+.footer__list:hover::after {
+    width: 100%;
+}
+.zg {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: var(--cta);
+}
+.list {
+    padding-top: 38px;
+}
+
+.footer__box {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.footer__contact {
+    flex-direction: column;
+    align-items: flex-end;
+}
+.footer__contact__box {
+    flex-direction: column;
+    align-items: flex-end;
+    row-gap: 9px;
+}
+.footer__ikon {
+    column-gap: 17px;
+    padding: 31px 0;
+}
+/* FOOTER */
+/* ONE ITEM - footer_info */
+
