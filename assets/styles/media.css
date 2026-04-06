@@ -169,3 +169,41 @@
         display: none;
     }
 }
+@media (max-width: 480px) {
+    .container {
+        max-width: 400px;
+    }
+    .cart__hero-total {
+    flex-direction: column;
+    row-gap: 30px;
+    align-items: flex-end;
+    column-gap: 15px;
+    
+}
+.poditog {
+     padding-right: 60px;
+    }
+    .cart__hero_row-box {
+        margin: 0;
+    }
+    .cart__hero__row-box-right {
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+    .features__grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .team__arrows {
+        right: -10px;
+    }
+    .team__btn {
+    
+    bottom: 27px;
+    left: 136px;
+    
+}
+.cart__hero_img {
+    padding: 0 30px 0 36px;
+}
+}
